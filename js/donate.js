@@ -59,7 +59,7 @@ document.getElementById('donate-for-student')
     
 
     // if(inputMoney === Number){
-      
+    //   console.log('enter amount',inputMoney);
     // }
     // else{
     //     alert('wrong input')
@@ -67,6 +67,21 @@ document.getElementById('donate-for-student')
 
 });
 
+document.getElementById('show-btn-donation')
+.addEventListener('click',function(){
+    showSectionById('donation');
+})
+
+document.getElementById('show-btn-blog')
+.addEventListener('click',function(){
+    showSectionById('blog-section');
+})
+
+
+document.getElementById('show-btn-history')
+.addEventListener('click',function(){
+    showSectionById('history-section');
+})
 
 
 
