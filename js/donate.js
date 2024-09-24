@@ -4,7 +4,7 @@ document.getElementById('donate-for-noakhali')
     .addEventListener('click', function (event) {
         event.preventDefault()
         const inputMoney = getInputFieldValueById('input-amount-noakhali');
-        console.log('get input value', inputMoney);
+        
         const balance = getTextFieldById('donates-balance-noakhali');
         const newDonateBalance = balance + inputMoney;
         document.getElementById('donates-balance-noakhali').innerText = newDonateBalance;
@@ -14,38 +14,25 @@ document.getElementById('donate-for-noakhali')
 
 
         const transactionHistory = document.createElement('p');
-        transactionHistory.innerText = `${inputMoney} BDT. Donate for Flood at Noakhali, Bangladesh .
-    `
+        transactionHistory.innerText = `${inputMoney} BDT. Donate for Flood at Noakhali, Bangladesh.
+        ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`
         document.getElementById('Transaction-container').appendChild(transactionHistory);
+        
+                if (isNaN(inputMoney) || inputMoney > accountBalance) {
+                    alert('Invalid Donation Amount')
+                    return;
+                }
+        
+                else {
+                    console.log(availableBalance);
+                }
+        
+            });
 
-        // if(isNaN(inputMoney)){
-        //     alert('Invalid Donation Amount');
-        //     return;
-        // }
-            
-        // if (isNaN(inputMoney) || inputMoney <= 0) {
-        //     alert('Invalid Donation Amount. Please enter a positive number.');
-        //     return;
-        // }
-
-
-
-
-        if (isNaN(inputMoney) || inputMoney < 0 ) {
+        
+        
            
-            alert('Invalid Donation Amount')
-            return;
-
-        }
-        // else if(isNaN(inputMoney)){
-        //     alert('Invalid Donation Amount');
-        //     return ;
-        // }
-        else {
-            console.log(availableBalance);
-        }
-
-    });
+        
 
 document.getElementById('donate-for-feni')
     .addEventListener('click', function (event) {
@@ -58,16 +45,21 @@ document.getElementById('donate-for-feni')
         const accountBalance = getTextFieldById('main-balance');
         const availableBalance = accountBalance - inputMoney;
         document.getElementById('main-balance').innerText = availableBalance;
+        
+        const transactionHistory = document.createElement('p');
+        transactionHistory.innerText = `${inputMoney} BDT.Donate for Flood Relief in Feni,Bangladesh.
+        ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`
+        document.getElementById('Transaction-container').appendChild(transactionHistory);
 
 
-        if (inputMoney === Number || inputMoney > 0) {
-            console.log(availableBalance)
+    //     if (inputMoney === Number || inputMoney > 0) {
+    //         console.log(availableBalance)
 
-        }
-        else {
-            alert('Invalid Donation Amount')
-        }
-    });
+    //     }
+    //     else {
+    //         alert('Invalid Donation Amount')
+    //     }
+     });
 
 
 document.getElementById('donate-for-student')
@@ -81,33 +73,47 @@ document.getElementById('donate-for-student')
         const accountBalance = getTextFieldById('main-balance');
         const availableBalance = accountBalance - inputMoney;
         document.getElementById('main-balance').innerText = availableBalance;
+        
+        const transactionHistory = document.createElement('p');
+        transactionHistory.innerText = `${inputMoney} BDT.Aid for Injured in the Quota Movement.
+        ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`
+        document.getElementById('Transaction-container').appendChild(transactionHistory);
 
 
-        if (inputMoney === Number || inputMoney > 0) {
-            console.log(availableBalance)
+        // if (inputMoney === Number || inputMoney > 0) {
+        //     console.log(availableBalance)
 
-        }
-        else {
-            alert('Invalid Donation Amount')
-        }
+        // }
+        // else {
+        //     alert('Invalid Donation Amount')
+        // }
 
+   });
+
+    const showDonate = document.getElementById('show-btn-donation');
+    const history = document.getElementById('show-btn-history');
+    history.addEventListener('click', function(){
+        history.classList.add('bg-[#B4F461]');
+       
+        showDonate.classList.remove('bg-[#B4F461]')
+        document.getElementById('donation').classList.add('hidden');
+        document.getElementById('history-section').classList.remove('hidden');
     });
 
-document.getElementById('show-btn-donation')
-    .addEventListener('click', function () {
-        showSectionById('donation');
+    
+    showDonate.addEventListener('click', function(){
+        showDonate.classList.add('bg-[#B4F461]');
+        history.classList.remove('bg-[#B4F461]')
+        document.getElementById('donation').classList.remove('hidden')
+        document.getElementById('history-section').classList.add('hidden');
     });
     
-    document.getElementById('show-btn-history')
-        .addEventListener('click', function () {
-            showSectionById('history-section');
-        });
+
+
+
 
         document.getElementById('show-btn-blog')
         .addEventListener('click', function () {
           
             window.location.href = 'blog.html';
         });
- 
-
-
