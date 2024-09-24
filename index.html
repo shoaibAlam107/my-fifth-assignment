@@ -40,7 +40,7 @@
                 <div class="bg-[#ffffff] stats shadow bg-opacity-25">
                     <div class="stat flex lg:w-auto lg:h-auto p-2 lg:py-4 lg:px-6">
                       <img class="w-5 h-5 lg:w-auto lg:h-auto" src="assets/coin.png" alt="">
-                      <div class="stat-value lg:font-medium lg:text-xl font-normal text-xs ">10000 BDT</div>
+                      <div id="main-balance" class="stat-value lg:font-medium lg:text-xl font-normal text-xs ">10000 BDT</div>
                       
                     </div>
                   </div>
@@ -66,17 +66,17 @@
             <div class="w-3/4">
               <div class="stat flex p-3 lg:justify-start justify-center">
                 <img class="w-4 h-4" src="assets/coin.png" alt="">
-                <div class="stat-value text-xs font-normal">0 BDT</div>
+                <div id="donates-balance-noakhali" class="stat-value text-xs font-normal"> 0 BDT</div>
               </div>
               <h1 class="text-sm font-bold text-center lg:text-left">Donate for Flood at Noakhali, Bangladesh</h1>
               <p class="py-4 text-xs font-light text-center lg:text-left ">
                 The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
               </p>
               <div class="form-control ">
-                <input type="amount" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
+                <input id="input-amount-noakhali" type="number" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
               </div>
               <div class=" form-control mt-4">
-                <button class="btn  bg-[#B4F461]">Donate Now</button>
+                <button id="donate-for-noakhali"  class="btn  bg-[#B4F461]">Donate Now</button>
               </div>
             </div>
           </div>
@@ -96,17 +96,17 @@
            <div class="w-3/4">
              <div class="stat flex p-3 lg:justify-start justify-center">
                <img class="w-4 h-4" src="assets/coin.png" alt="">
-               <div class="stat-value text-xs font-normal">0 BDT</div>
+               <div id="donates-balance-feni" class="stat-value text-xs font-normal">0 BDT</div>
              </div>
              <h1 class="text-sm font-bold text-center lg:text-left">Donate for Flood Relief in Feni,Bangladesh</h1>
              <p class="py-4 text-xs font-light text-center lg:text-left ">
                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
              </p>
              <div class="form-control ">
-               <input type="amount" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
+               <input id="input-amount-feni" type="number" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
              </div>
              <div class=" form-control mt-4">
-               <button class="btn  bg-[#B4F461]">Donate Now</button>
+               <button id="donate-for-feni" class="btn  bg-[#B4F461]">Donate Now</button>
              </div>
            </div>
          </div>
@@ -124,24 +124,31 @@
              <div class="w-3/4">
                <div class="stat flex p-3 lg:justify-start justify-center">
                  <img class="w-4 h-4" src="assets/coin.png" alt="">
-                 <div class="stat-value text-xs font-normal">0 BDT</div>
+                 <div id="donates-balance-student" class="stat-value text-xs font-normal">0 BDT</div>
                </div>
                <h1 class="text-sm font-bold text-center lg:text-left ">Aid for Injured in the Quota Movement</h1>
                <p class="py-4 text-xs font-light text-center lg:text-left ">
                  The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                </p>
                <div class="form-control ">
-                 <input type="amount" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
+                 <input id="input-amount-student" type="number" placeholder="Write Donation Amount" class="input input-bordered text-xs font-light" required />
                </div>
                <div class=" form-control mt-4">
-                 <button class="btn  bg-[#B4F461]">Donate Now</button>
+                 <button id="donate-for-student" class="btn  bg-[#B4F461]">Donate Now</button>
                </div>
              </div>
            </div>
          </div>
          </section>        
-                 
+         
+        <!-- donation section end -->
        
+      </main>
+  
+      <script src="js/utilities.js"></script>
+      <script src="js/donate.js"></script>
+  </body>
+  </html>
        
        
 
@@ -158,13 +165,8 @@
               
 
           
-      <!-- donation section end -->
        
 
             
 
              
-    </main>
-    <script src="js/donate.js"></script>
-</body>
-</html>
