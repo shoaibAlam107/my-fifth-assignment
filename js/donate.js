@@ -106,7 +106,7 @@ document.getElementById('show-btn-donation')
         document.getElementById('show-btn-blog')
         .addEventListener('click', function () {
           
-            window.location.href = 'C:\projects\my-fifth-assignment\blog.html';
+            window.location.href = 'blog.html';
         });
  
 
