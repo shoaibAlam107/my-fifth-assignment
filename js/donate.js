@@ -4,6 +4,12 @@ document.getElementById('donate-for-noakhali')
     .addEventListener('click', function (event) {
         event.preventDefault()
         const inputMoney = getInputFieldValueById('input-amount-noakhali');
+
+        if(isNaN(inputMoney)){
+            alert('Invalid amount');
+            return ;
+        }
+     
         
         const balance = getTextFieldById('donates-balance-noakhali');
         const newDonateBalance = balance + inputMoney;
@@ -17,16 +23,12 @@ document.getElementById('donate-for-noakhali')
         transactionHistory.innerText = `${inputMoney} BDT. Donate for Flood at Noakhali, Bangladesh.
         ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`
         document.getElementById('Transaction-container').appendChild(transactionHistory);
+
         
-                if (isNaN(inputMoney) || inputMoney > accountBalance) {
-                    alert('Invalid Donation Amount')
-                    return;
-                }
         
-                else {
-                    console.log(availableBalance);
-                }
         
+                
+
             });
 
         
